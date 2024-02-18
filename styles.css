@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f1f1f1;
+  }
+  
+  .stopwatch {
+    display: inline-block;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0e17c3, #47ddff);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    position: relative;
+  }
+  
+  .stopwatch:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  #display {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  }
+  
+  #display.pulse {
+    animation: pulse 1s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #FF8C00;
+    transform: scale(1.1);
+  }
+  
+  #lapButton {
+    background-color: #FFD700;
+    color: #333;
+  }
+  
+  #resetButton {
+    background-color: #DC143C;
+    color: #fff;
+  }
+  
+  ul {
+    text-align: left;
+    margin-top: 20px;
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 0;
+  }
+  
+  ul li {
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animation for buttons when stopwatch is stopped */
+  .buttonAnimation {
+    animation: bounce 0.5s infinite alternate;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  
